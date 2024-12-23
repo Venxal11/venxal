@@ -1,0 +1,424 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden; /* Prevent horizontal scroll caused by absolute positions */
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  z-index: 10; /* Ensure it stays above the cat images */
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background: #1d3557;
+  color: #fff;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden; /* Prevent images from extending outside */
+}
+
+header .profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header .tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Background Cats */
+.background-cats {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Spread out images evenly */
+  align-items: center;
+  opacity: 0.3; /* Make the images subtle */
+  z-index: 5; /* Behind the text and profile photo */
+}
+
+.background-cats .cat-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 10px;
+  transition: transform 0.3s ease; /* Fun hover effect */
+}
+
+.background-cats .cat-image:hover {
+  transform: scale(1.1);
+}
+
+/* About Me Section */
+#about {
+  margin-top: 30px;
+  background: #e9ecef;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-details {
+  flex: 1;
+  min-width: 200px;
+}
+
+.about-details p {
+  margin: 5px 0;
+}
+
+/* Flags */
+.flags {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.flags img {
+  width: 50px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.flags img:hover {
+  transform: scale(1.1);
+}
+
+/* Section Styles (Movies, Games, Anime, Interests) */
+section {
+  margin-top: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid #1d3557;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+section p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* List Styles */
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section ul li {
+  background: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Anime Section Customization */
+#anime h3 {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #1d3557;
+}
+
+/* Interests Section */
+#interests p {
+  text-align: center;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Likes & Dislikes */
+.flex-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.flex-container div {
+  flex: 1;
+  min-width: 200px;
+  background: #f1f3f5;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.flex-container h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #1d3557;
+}
+
+.flex-container ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.flex-container ul li {
+  background: none;
+  margin-bottom: 5px;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  transition: none;
+}
+
+.flex-container ul li:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Band List Styles */
+.band-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next row */
+  gap: 20px; /* Spacing between items */
+}
+
+.band-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9; /* Optional: Add a subtle background */
+  padding: 5px 10px; /* Optional: Add padding for better spacing */
+  border-radius: 8px; /* Optional: Rounded corners for each item */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for better appearance */
+}
+
+.band-list img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #1d3557;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .social-icons {
+    position: static;
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+
+  section ul {
+    grid-template-columns: 1fr;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Media Section Styling */
+#media-section {
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 8px;
+}
+
+#media-section .media-container {
+  display: flex;
+  gap: 30px; /* Space between sections */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between;
+}
+
+#media-section section {
+  flex: 1; /* Equal width sections */
+  min-width: 300px; /* Ensure sections do not shrink too small */
+  max-width: 45%; /* Prevent sections from taking too much space */
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#media-section .content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#media-section .content-block {
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #media-section .media-container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+  }
+
+  #media-section section {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+}
+
+.dms-text {
+  margin-top: 65px; /* Adjust spacing */
+  text-align: left; /* Center-align text */
+  font-size: 1rem; /* Match font size to About Me text */
+  color: inherit; /* Inherit the text color from parent */
+  font-family: inherit; /* Use the same font as About Me */
+}
+
+/* Floating Animation for Cats */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+/* Tooltip for Social Icons */
+.tooltip {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
+
+/* Carousel Styles */
+.carousel-next, .carousel-prev {
+  background: #1d3557;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-next {
+  right: -50px;
+}
+
+.carousel-prev {
+  left: -50px;
+}
+
+.band-list {
+  display: flex;
+  transition: transform 0.5s ease;
+}
